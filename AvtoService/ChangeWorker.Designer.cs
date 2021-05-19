@@ -65,7 +65,6 @@
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(243, 30);
             this.textBox5.TabIndex = 35;
-            this.textBox5.Text = "MasterAvto";
             // 
             // label9
             // 
@@ -133,7 +132,6 @@
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(243, 30);
             this.textBox4.TabIndex = 28;
-            this.textBox4.Text = "89600895401";
             // 
             // textBox3
             // 
@@ -142,7 +140,6 @@
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(243, 30);
             this.textBox3.TabIndex = 27;
-            this.textBox3.Text = "Анатольевич";
             // 
             // textBox2
             // 
@@ -151,7 +148,6 @@
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(243, 30);
             this.textBox2.TabIndex = 26;
-            this.textBox2.Text = "Олег";
             // 
             // textBox1
             // 
@@ -160,7 +156,6 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(243, 30);
             this.textBox1.TabIndex = 25;
-            this.textBox1.Text = "Апраксин";
             // 
             // label6
             // 

@@ -43,7 +43,6 @@
             this.label9 = new System.Windows.Forms.Label();
             this.comboBox4 = new System.Windows.Forms.ComboBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label4
@@ -99,11 +98,10 @@
             // dateTimePicker2
             // 
             this.dateTimePicker2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.dateTimePicker2.Location = new System.Drawing.Point(583, 52);
+            this.dateTimePicker2.Location = new System.Drawing.Point(381, 127);
             this.dateTimePicker2.Name = "dateTimePicker2";
             this.dateTimePicker2.Size = new System.Drawing.Size(225, 30);
             this.dateTimePicker2.TabIndex = 5;
-            this.dateTimePicker2.Visible = false;
             // 
             // textBox2
             // 
@@ -122,7 +120,6 @@
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(225, 30);
             this.comboBox1.TabIndex = 7;
-            this.comboBox1.Text = "Р763ТО";
             // 
             // comboBox2
             // 
@@ -182,7 +179,6 @@
             this.comboBox4.Name = "comboBox4";
             this.comboBox4.Size = new System.Drawing.Size(225, 30);
             this.comboBox4.TabIndex = 13;
-            this.comboBox4.Text = "Активный";
             // 
             // label10
             // 
@@ -194,20 +190,10 @@
             this.label10.TabIndex = 14;
             this.label10.Text = "Добавление записи";
             // 
-            // textBox3
-            // 
-            this.textBox3.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox3.Location = new System.Drawing.Point(381, 130);
-            this.textBox3.Multiline = true;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(225, 26);
-            this.textBox3.TabIndex = 15;
-            // 
             // AddRecord
             // 
             this.BackgroundImage = global::AvtoService.Properties.Resources.IMG_20210519_184359_633_013;
             this.ClientSize = new System.Drawing.Size(820, 586);
-            this.Controls.Add(this.textBox3);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.comboBox4);
             this.Controls.Add(this.label9);
@@ -252,6 +238,5 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.ComboBox comboBox4;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox textBox3;
     }
 }

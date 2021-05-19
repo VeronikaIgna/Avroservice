@@ -115,7 +115,6 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(243, 30);
             this.textBox1.TabIndex = 7;
-            this.textBox1.Text = "Апраксин";
             // 
             // textBox2
             // 
@@ -124,7 +123,6 @@
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(243, 30);
             this.textBox2.TabIndex = 8;
-            this.textBox2.Text = "Олег";
             // 
             // textBox3
             // 
@@ -133,7 +131,6 @@
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(243, 30);
             this.textBox3.TabIndex = 9;
-            this.textBox3.Text = "Анатольевич";
             // 
             // textBox4
             // 
@@ -142,7 +139,6 @@
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(243, 30);
             this.textBox4.TabIndex = 10;
-            this.textBox4.Text = "89600895401";
             // 
             // comboBox1
             // 
@@ -212,7 +208,6 @@
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(243, 30);
             this.textBox5.TabIndex = 17;
-            this.textBox5.Text = "MasterAvto";
             // 
             // textBox6
             // 

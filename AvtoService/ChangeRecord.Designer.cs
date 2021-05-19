@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox3 = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.comboBox4 = new System.Windows.Forms.ComboBox();
             this.label9 = new System.Windows.Forms.Label();
@@ -45,16 +44,6 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.SuspendLayout();
-            // 
-            // textBox3
-            // 
-            this.textBox3.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox3.Location = new System.Drawing.Point(381, 130);
-            this.textBox3.Multiline = true;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(225, 26);
-            this.textBox3.TabIndex = 31;
-            this.textBox3.Text = "19.05.2021";
             // 
             // label10
             // 
@@ -74,7 +63,6 @@
             this.comboBox4.Name = "comboBox4";
             this.comboBox4.Size = new System.Drawing.Size(225, 30);
             this.comboBox4.TabIndex = 29;
-            this.comboBox4.Text = "Активный";
             // 
             // label9
             // 
@@ -115,7 +103,6 @@
             this.comboBox3.Name = "comboBox3";
             this.comboBox3.Size = new System.Drawing.Size(225, 30);
             this.comboBox3.TabIndex = 25;
-            this.comboBox3.Text = "Смирнов";
             // 
             // comboBox2
             // 
@@ -125,7 +112,6 @@
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(225, 30);
             this.comboBox2.TabIndex = 24;
-            this.comboBox2.Text = "Диагностика давления топливной системы";
             // 
             // comboBox1
             // 
@@ -135,7 +121,6 @@
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(225, 30);
             this.comboBox1.TabIndex = 23;
-            this.comboBox1.Text = "Т890МН";
             // 
             // textBox2
             // 
@@ -145,16 +130,14 @@
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(225, 26);
             this.textBox2.TabIndex = 22;
-            this.textBox2.Text = "12:00:00";
             // 
             // dateTimePicker2
             // 
             this.dateTimePicker2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.dateTimePicker2.Location = new System.Drawing.Point(544, 23);
+            this.dateTimePicker2.Location = new System.Drawing.Point(381, 127);
             this.dateTimePicker2.Name = "dateTimePicker2";
             this.dateTimePicker2.Size = new System.Drawing.Size(225, 30);
             this.dateTimePicker2.TabIndex = 21;
-            this.dateTimePicker2.Visible = false;
             // 
             // label8
             // 
@@ -212,7 +195,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::AvtoService.Properties.Resources.IMG_20210519_184359_633_013;
             this.ClientSize = new System.Drawing.Size(820, 586);
-            this.Controls.Add(this.textBox3);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.comboBox4);
             this.Controls.Add(this.label9);
@@ -236,8 +218,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.ComboBox comboBox4;
         private System.Windows.Forms.Label label9;
