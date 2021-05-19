@@ -15,7 +15,9 @@ namespace AvtoService
 
     public partial class MainForm : Form
     {
-        public static string ConnectionString = "Server=localhost;Database=avtoservice;Uid=root;pwd=MemoriesInHeart2020;";
+        public static string ConnectionString = $"Server=localhost;Database={Settings.DataBaseName};" +
+            $"Uid={Settings.DataBaseUsername};" +
+            $"pwd={Settings.DataBasePassword};";
         public static int countOwners = 0;
 
         Entrance sf;
@@ -232,10 +234,14 @@ namespace AvtoService
         {
             var helper = new WordHelper("AAAContractPr.doc");
 
+            DataGridViewRow row = dataGridView1.Rows[dataGridView1.SelectedCells[0].RowIndex];
+
             var items = new Dictionary<string, string>
             {
-               {"<id_Contract>", textBox2.Text }, 
+               {"<id_Contract>", row.Cells[0].Value.ToString() }
             };
+
+
             helper.Process(items);
         }
 

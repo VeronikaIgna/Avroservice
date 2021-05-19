@@ -13,7 +13,9 @@ namespace AvtoService
 {
     public partial class AddWorker : Form
     {
-        public static string ConnectionString = "Server=localhost;Database=avtoservice;Uid=root;pwd=MemoriesInHeart2020;";
+        public static string ConnectionString = $"Server=localhost;Database={Settings.DataBaseName};" +
+            $"Uid={Settings.DataBaseUsername};" +
+            $"pwd={Settings.DataBasePassword};charset=koi8r";
         Form f8;
 
         private MySqlConnection Connection = new MySqlConnection(ConnectionString);
