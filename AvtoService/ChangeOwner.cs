@@ -13,11 +13,10 @@ namespace AvtoService
 {
     public partial class ChangeOwner : Form
     {
-        public static string ConnectionString = "Server=localhost;Database=avtoservice;Uid=root;pwd=MemoriesInHeart2020;Charset=koi8r";
-        public static string ConnectionString1 = "Server=localhost;Uid=root;pwd=koyash;";
+        public static string ConnectionString = $"Server=localhost;Database={Settings.DataBaseName};" +
+            $"Uid={Settings.DataBaseUsername};" +
+            $"pwd={Settings.DataBasePassword};charset=koi8r";
         MainForm f1;
-
-        private MySqlConnection Connection1 = new MySqlConnection(ConnectionString1);
 
         private MySqlConnection Connection = new MySqlConnection(ConnectionString);
         public ChangeOwner()

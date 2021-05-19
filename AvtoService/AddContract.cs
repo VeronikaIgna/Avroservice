@@ -13,11 +13,11 @@ namespace AvtoService
 {
     public partial class AddContract : Form
     {
-        public static string ConnectionString = "Server=localhost;Database=avtoservice;Uid=root;pwd=MemoriesInHeart2020;Charset=koi8r";
-        public static string ConnectionString1 = "Server=localhost;Uid=root;pwd=koyash;";
+        public static string ConnectionString = $"Server=localhost;Database={Settings.DataBaseName};" +
+            $"Uid={Settings.DataBaseUsername};" +
+            $"pwd={Settings.DataBasePassword};charset=koi8r";
         MainForm f1;
         public int id_Owner;
-        private MySqlConnection Connection1 = new MySqlConnection(ConnectionString1);
 
         private MySqlConnection Connection = new MySqlConnection(ConnectionString);
 
@@ -97,7 +97,6 @@ namespace AvtoService
         private void AddContract_FormClosed(object sender, FormClosedEventArgs e)
         {
             Connection.Close();
-            Connection1.Close();
         }
 
         private void button2_Click(object sender, EventArgs e)

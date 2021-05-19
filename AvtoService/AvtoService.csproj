@@ -185,6 +185,7 @@
     <Compile Include="AddRecord.Designer.cs">
       <DependentUpon>AddRecord.cs</DependentUpon>
     </Compile>
+    <Compile Include="Settings.cs" />
     <Compile Include="WordHelper.cs" />
     <Compile Include="Worker.cs">
       <SubType>Form</SubType>

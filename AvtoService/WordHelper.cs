@@ -60,15 +60,16 @@ namespace AvtoService
 
                 Object newFileName = Path.Combine(_fileInfo.DirectoryName, DateTime.Now.ToString("yyyyMMdd HHmmss ") + _fileInfo.Name);
                 app.ActiveDocument.SaveAs2(newFileName);
+                System.Diagnostics.Process.Start(app.ActiveDocument.Path);
                 app.ActiveDocument.Close();
-                
+
                 return true;
             }
             catch(Exception ex) { Console.WriteLine(ex.Message); }
             finally
             {
                 if (app != null)
-               app.Quit();
+                app.Quit();
             }
             return false;
         }
