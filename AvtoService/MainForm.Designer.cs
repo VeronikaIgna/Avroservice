@@ -312,7 +312,6 @@
             this.button1.TabIndex = 16;
             this.button1.Text = "Печать";
             this.button1.UseVisualStyleBackColor = true;
-            this.button1.Visible = false;
             this.button1.Click += new System.EventHandler(this.button1_Click_2);
             // 
             // button3
@@ -325,7 +324,6 @@
             this.button3.TabIndex = 17;
             this.button3.Text = "Печать";
             this.button3.UseVisualStyleBackColor = true;
-            this.button3.Visible = false;
             this.button3.Click += new System.EventHandler(this.button3_Click_1);
             // 
             // textBox2
@@ -336,7 +334,6 @@
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(204, 31);
             this.textBox2.TabIndex = 18;
-            this.textBox2.Visible = false;
             // 
             // label4
             // 
