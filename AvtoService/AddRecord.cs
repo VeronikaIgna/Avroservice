@@ -86,8 +86,6 @@ namespace AvtoService
 
             if ((dateTimePicker2.Text != "") && (textBox2.Text != "") && (comboBox4.Text != "") && (stateNumbersBox.Text != "") && (comboBox2.Text != "") && (comboBox3.Text != ""))
             {
-               
-              
                 MySqlCommand cmd1 = new MySqlCommand("SELECT id_Owner FROM Car  where StateNumber = '" + stateNumbersBox.Text + "'", Connection);
                 int idOwner = Convert.ToInt32(cmd1.ExecuteScalar());
                 MySqlCommand cmd2 = new MySqlCommand("SELECT id_Services FROM services where Name_Services = '" + comboBox2.Text + "'", Connection);
