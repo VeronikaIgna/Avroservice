@@ -21,8 +21,9 @@ namespace AvtoService
         public AddRecord()
         {
             InitializeComponent();
-           
+
         }
+
         public AddRecord(Form f3)
         {
             InitializeComponent();
@@ -82,29 +83,36 @@ namespace AvtoService
 
         private void button1_Click(object sender, EventArgs e)//Добавление записи
         {
-            
-                if ((dateTimePicker2.Text != "") && (textBox2.Text != "") && (comboBox4.Text != "") && (stateNumbersBox.Text != "") && (comboBox2.Text != "") && (comboBox3.Text != ""))
-                {
-                    string query = "Insert Into record (Date, Time_Work, Status,) values ('" + dateTimePicker2.Text.ToString() + "', '" + textBox2.Text.ToString() + "', '" + comboBox4.Text.ToString() + "')";
-                    MySqlCommand command = new MySqlCommand(query, Connection);
-                    command.ExecuteNonQuery(); //выполнение запроса
-                    MySqlCommand cmd = new MySqlCommand("SELECT id_Record FROM record  ORDER BY id_Owner DESC  LIMIT 1", Connection);
-                    int countRecords = Convert.ToInt32(cmd.ExecuteScalar());
-                    MySqlCommand cmd1 = new MySqlCommand("SELECT id_Car FROM Car  where StateNumber = '" + stateNumbersBox.Text + "'", Connection);
-                    int countStateNumber = Convert.ToInt32(cmd1.ExecuteScalar());
-                    MySqlCommand cmd2 = new MySqlCommand("SELECT id_Services FROM services where Name_Services = '" + comboBox2.Text + "'", Connection);
-                    int countServices = Convert.ToInt32(cmd2.ExecuteScalar());
-                    MySqlCommand cmd3 = new MySqlCommand("SELECT id_Worker FROM worker where Surname_Work = '" + comboBox3.Text + "'", Connection);
-                    int countWorker = Convert.ToInt32(cmd2.ExecuteScalar());
-                    MySqlCommand cmd4 = new MySqlCommand("SELECT id_Status FROM status where Name_status = '" + comboBox4.Text + "'", Connection);
-                     int counStatus = Convert.ToInt32(cmd.ExecuteScalar());
+
+            if ((dateTimePicker2.Text != "") && (textBox2.Text != "") && (comboBox4.Text != "") && (stateNumbersBox.Text != "") && (comboBox2.Text != "") && (comboBox3.Text != ""))
+            {
+               
+              
+                MySqlCommand cmd1 = new MySqlCommand("SELECT id_Owner FROM Car  where StateNumber = '" + stateNumbersBox.Text + "'", Connection);
+                int idOwner = Convert.ToInt32(cmd1.ExecuteScalar());
+                MySqlCommand cmd2 = new MySqlCommand("SELECT id_Services FROM services where Name_Services = '" + comboBox2.Text + "'", Connection);
+                int countServices = Convert.ToInt32(cmd2.ExecuteScalar());
+                MySqlCommand cmd3 = new MySqlCommand("SELECT id_Worker FROM worker where Surname_Work = '" + comboBox3.Text + "'", Connection);
+                int countWorker = Convert.ToInt32(cmd3.ExecuteScalar());
+                MySqlCommand cmd4 = new MySqlCommand("SELECT id_Status FROM status where Name_status = '" + comboBox4.Text + "'", Connection);
+                int counStatus = Convert.ToInt32(cmd4.ExecuteScalar());
+
+                string query = $"Insert Into record (Date, Time_Work,  id_Status, id_Services,id_Worker,id_Owner) values " +
+                    $"('{dateTimePicker2.Value.Date.ToString("yyyy-MM-dd")}', " +
+                    $"'{textBox2.Text.ToString()}'," +
+                    $"'{counStatus}'," +
+                    $"{countServices}," +
+                    $"{countWorker}," +
+                    $"{idOwner})";
+                MySqlCommand command = new MySqlCommand(query, Connection);
+                command.ExecuteNonQuery(); //выполнение запроса
                 MessageBox.Show("Данные добавлены!");
-                    //this.f4.LoadDataFromTableRecord();
+                //this.f4.LoadDataFromTableRecord();
 
-                    Close();
+                Close();
 
-                }
-                else MessageBox.Show("Запись не добавлена! Пропущены поля!");
             }
+            else MessageBox.Show("Запись не добавлена! Пропущены поля!");
+        }
     }
-    }
+}

@@ -65,6 +65,7 @@ namespace AvtoService
      
         private void button1_Click(object sender, EventArgs e)//Добавление записи
         {
+           
             AddRecord form4 = new AddRecord(this);
                 form4.Show();
             }
