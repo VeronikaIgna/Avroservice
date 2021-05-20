@@ -13,9 +13,7 @@ namespace AvtoService
 {
     public partial class AddRecord : Form
     {
-        public static string ConnectionString = $"Server=localhost;Database={Settings.DataBaseName};" +
-            $"Uid={Settings.DataBaseUsername};" +
-            $"pwd={Settings.DataBasePassword};charset=koi8r";
+        public static string ConnectionString = "Server=localhost;Database=avtoservice;Uid=root;pwd=MemoriesInHeart2020;";
         Form f4;
 
         private MySqlConnection Connection = new MySqlConnection(ConnectionString);

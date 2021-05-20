@@ -15,9 +15,9 @@ namespace AvtoService
 
     public partial class MainForm : Form
     {
-        public static string ConnectionString = $"Server=localhost;Database={Settings.DataBaseName};" +
-            $"Uid={Settings.DataBaseUsername};" +
-            $"pwd={Settings.DataBasePassword};";
+        public static string ConnectionString = "Server=localhost;Database=avtoservice;Uid=root;pwd=MemoriesInHeart2020;";
+      
+
         public static int countOwners = 0;
 
         Entrance sf;
