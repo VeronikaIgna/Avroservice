@@ -81,8 +81,31 @@ namespace AvtoService
 
         private void button4_Click(object sender, EventArgs e)
         {
-            ChangeWorker form11 = new ChangeWorker(this);
-            form11.Show();
+            if (dataGridView1.CurrentRow.Index != -1)
+            {
+                int id_Worker = Convert.ToInt32(dataGridView1.Rows[dataGridView1.CurrentRow.Index].Cells[0].Value);
+
+                string login = "";
+                string password = "";
+
+                string query = $"select login, password from worker where id_worker = '{id_Worker}'";
+                MySqlCommand cmd = new MySqlCommand(query, Connection);
+                var reader = cmd.ExecuteReader();
+                while (reader.Read())
+                {
+                    login = reader.GetString("login");
+                    password = reader.GetString("password");
+                    
+                }
+                reader.Close();
+
+                string surname = dataGridView1.Rows[dataGridView1.CurrentRow.Index].Cells[1].Value.ToString();
+                string name = dataGridView1.Rows[dataGridView1.CurrentRow.Index].Cells[2].Value.ToString();
+                string lastname = dataGridView1.Rows[dataGridView1.CurrentRow.Index].Cells[3].Value.ToString();
+                string phoneNumber = dataGridView1.Rows[dataGridView1.CurrentRow.Index].Cells[4].Value.ToString();
+                string position = dataGridView1.Rows[dataGridView1.CurrentRow.Index].Cells[5].Value.ToString();
+                new ChangeWorker(this, id_Worker, surname, name, lastname, phoneNumber, position, login, password).Show();
+            }
         }
 
         private void Worker_Load(object sender, EventArgs e)

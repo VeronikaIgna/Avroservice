@@ -52,27 +52,30 @@
             // textBox6
             // 
             this.textBox6.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox6.Location = new System.Drawing.Point(417, 617);
+            this.textBox6.Location = new System.Drawing.Point(313, 501);
+            this.textBox6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox6.Name = "textBox6";
             this.textBox6.PasswordChar = '*';
-            this.textBox6.Size = new System.Drawing.Size(243, 30);
+            this.textBox6.Size = new System.Drawing.Size(183, 26);
             this.textBox6.TabIndex = 36;
             // 
             // textBox5
             // 
             this.textBox5.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox5.Location = new System.Drawing.Point(417, 555);
+            this.textBox5.Location = new System.Drawing.Point(313, 451);
+            this.textBox5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(243, 30);
+            this.textBox5.Size = new System.Drawing.Size(183, 26);
             this.textBox5.TabIndex = 35;
             // 
             // label9
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label9.Location = new System.Drawing.Point(246, 620);
+            this.label9.Location = new System.Drawing.Point(184, 504);
+            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(93, 27);
+            this.label9.Size = new System.Drawing.Size(73, 21);
             this.label9.TabIndex = 34;
             this.label9.Text = "Пароль:";
             // 
@@ -80,9 +83,10 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label8.Location = new System.Drawing.Point(258, 558);
+            this.label8.Location = new System.Drawing.Point(194, 453);
+            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(81, 27);
+            this.label8.Size = new System.Drawing.Size(65, 21);
             this.label8.TabIndex = 33;
             this.label8.Text = "Логин:";
             // 
@@ -90,18 +94,20 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Times New Roman", 16.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label7.Location = new System.Drawing.Point(248, 469);
+            this.label7.Location = new System.Drawing.Point(186, 381);
+            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(366, 32);
+            this.label7.Size = new System.Drawing.Size(293, 25);
             this.label7.TabIndex = 32;
             this.label7.Text = "Параметры учетной записи";
             // 
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button2.Location = new System.Drawing.Point(780, 681);
+            this.button2.Location = new System.Drawing.Point(585, 553);
+            this.button2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(140, 42);
+            this.button2.Size = new System.Drawing.Size(105, 34);
             this.button2.TabIndex = 31;
             this.button2.Text = "Отмена";
             this.button2.UseVisualStyleBackColor = true;
@@ -109,61 +115,69 @@
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button1.Location = new System.Drawing.Point(597, 681);
+            this.button1.Location = new System.Drawing.Point(448, 553);
+            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(142, 42);
+            this.button1.Size = new System.Drawing.Size(106, 34);
             this.button1.TabIndex = 30;
             this.button1.Text = "Изменить";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // comboBox1
             // 
             this.comboBox1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(417, 364);
+            this.comboBox1.Location = new System.Drawing.Point(313, 296);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(243, 30);
+            this.comboBox1.Size = new System.Drawing.Size(183, 27);
             this.comboBox1.TabIndex = 29;
             // 
             // textBox4
             // 
             this.textBox4.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox4.Location = new System.Drawing.Point(417, 303);
+            this.textBox4.Location = new System.Drawing.Point(313, 246);
+            this.textBox4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(243, 30);
+            this.textBox4.Size = new System.Drawing.Size(183, 26);
             this.textBox4.TabIndex = 28;
             // 
             // textBox3
             // 
             this.textBox3.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox3.Location = new System.Drawing.Point(417, 243);
+            this.textBox3.Location = new System.Drawing.Point(313, 197);
+            this.textBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(243, 30);
+            this.textBox3.Size = new System.Drawing.Size(183, 26);
             this.textBox3.TabIndex = 27;
             // 
             // textBox2
             // 
             this.textBox2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox2.Location = new System.Drawing.Point(417, 190);
+            this.textBox2.Location = new System.Drawing.Point(313, 154);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(243, 30);
+            this.textBox2.Size = new System.Drawing.Size(183, 26);
             this.textBox2.TabIndex = 26;
             // 
             // textBox1
             // 
             this.textBox1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox1.Location = new System.Drawing.Point(417, 137);
+            this.textBox1.Location = new System.Drawing.Point(313, 111);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(243, 30);
+            this.textBox1.Size = new System.Drawing.Size(183, 26);
             this.textBox1.TabIndex = 25;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label6.Location = new System.Drawing.Point(206, 367);
+            this.label6.Location = new System.Drawing.Point(154, 298);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(133, 27);
+            this.label6.Size = new System.Drawing.Size(105, 21);
             this.label6.TabIndex = 24;
             this.label6.Text = "Должность:";
             // 
@@ -171,9 +185,10 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label5.Location = new System.Drawing.Point(172, 306);
+            this.label5.Location = new System.Drawing.Point(129, 249);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(187, 27);
+            this.label5.Size = new System.Drawing.Size(145, 21);
             this.label5.TabIndex = 23;
             this.label5.Text = "Номер телефона:";
             // 
@@ -181,9 +196,10 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label3.Location = new System.Drawing.Point(226, 246);
+            this.label3.Location = new System.Drawing.Point(170, 200);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(113, 27);
+            this.label3.Size = new System.Drawing.Size(90, 21);
             this.label3.TabIndex = 22;
             this.label3.Text = "Отчество:";
             // 
@@ -191,9 +207,10 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label2.Location = new System.Drawing.Point(248, 193);
+            this.label2.Location = new System.Drawing.Point(186, 157);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(61, 27);
+            this.label2.Size = new System.Drawing.Size(48, 21);
             this.label2.TabIndex = 21;
             this.label2.Text = "Имя:";
             // 
@@ -201,9 +218,10 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 16.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.Location = new System.Drawing.Point(102, -114);
+            this.label1.Location = new System.Drawing.Point(76, -93);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(397, 32);
+            this.label1.Size = new System.Drawing.Size(310, 25);
             this.label1.TabIndex = 20;
             this.label1.Text = "Добавление нового сотрудника";
             // 
@@ -211,9 +229,10 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label4.Location = new System.Drawing.Point(228, 140);
+            this.label4.Location = new System.Drawing.Point(171, 114);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(111, 27);
+            this.label4.Size = new System.Drawing.Size(86, 21);
             this.label4.TabIndex = 19;
             this.label4.Text = "Фамилия:";
             // 
@@ -221,19 +240,20 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Times New Roman", 16.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label10.Location = new System.Drawing.Point(248, 44);
+            this.label10.Location = new System.Drawing.Point(186, 36);
+            this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(400, 32);
+            this.label10.Size = new System.Drawing.Size(316, 25);
             this.label10.TabIndex = 37;
             this.label10.Text = "Изменение данных сотрудника";
             // 
             // ChangeWorker
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::AvtoService.Properties.Resources.IMG_20210519_183945_012_013;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(961, 746);
+            this.ClientSize = new System.Drawing.Size(721, 606);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.textBox6);
             this.Controls.Add(this.textBox5);
@@ -253,6 +273,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label4);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "ChangeWorker";
             this.Text = "Изменение данных сотрудника";
             this.Load += new System.EventHandler(this.ChangeWorker_Load);
