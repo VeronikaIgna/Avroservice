@@ -167,10 +167,9 @@ namespace AvtoService
 
         private void button2_Click_1(object sender, EventArgs e)
         {
-            
-            Entrance entrance = new Entrance();
-            entrance.Show();
-            this.Hide();
+
+            sf.Show();
+            Close();
           
         }
 

@@ -29,9 +29,8 @@ namespace AvtoService
 
         private void button2_Click(object sender, EventArgs e)
         {
-            Entrance entrance = new Entrance();
             entrance.Show();
-            this.Hide();
+            Close();
         }
 
         private void FormaForTO_FormClosed(object sender, FormClosedEventArgs e)

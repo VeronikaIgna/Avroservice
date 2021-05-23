@@ -16,14 +16,14 @@ namespace AvtoService
         public static string ConnectionString = $"Server=localhost;Database={Settings.DataBaseName};" +
             $"Uid={Settings.DataBaseUsername};" +
             $"pwd={Settings.DataBasePassword};charset=koi8r";
-        Form f8;
+        Worker f8;
 
         private MySqlConnection Connection = new MySqlConnection(ConnectionString);
         public AddWorker()
         {
             InitializeComponent();
         }
-        public AddWorker(Form f7)
+        public AddWorker(Worker f7)
         {
             InitializeComponent();
             this. f8= f7;
@@ -43,7 +43,27 @@ namespace AvtoService
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            if (textBox1.Text != "" && textBox2.Text != "" && textBox3.Text != "" && textBox4.Text != "" && textBox5.Text != "" && textBox6.Text != "")
+            {
+                MySqlCommand cmd1 = new MySqlCommand("SELECT id_position FROM position where Name_position = '" + comboBox1.Text + "'", Connection);
+                int idPosition = Convert.ToInt32(cmd1.ExecuteScalar());
+                string insertQuery = "insert into worker(surname_work, name_work, middlename_work, phonenumber_work, id_position, login, password) " +
+                    "values (" +
+                    $"'{textBox1.Text}'," +
+                    $"'{textBox2.Text}'," +
+                    $"'{textBox3.Text}'," +
+                    $"'{textBox4.Text}'," +
+                    $"'{idPosition}'," +
+                    $"'{textBox5.Text}'," +
+                    $"'{textBox6.Text}')";
+                cmd1 = new MySqlCommand(insertQuery, Connection);
+                cmd1.ExecuteNonQuery();
+                MessageBox.Show("Добавлен новый сотрудник!");
+                f8.LoadDataFromTableWorker();
+                Close();
+            }
+            else
+                MessageBox.Show("Не все поля заполнены!");
         }
      
         private void AddWorker_FormClosed(object sender, FormClosedEventArgs e)
