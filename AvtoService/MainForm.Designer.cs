@@ -68,7 +68,7 @@
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(223, 131);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 65;
             this.dataGridView1.RowTemplate.Height = 24;
@@ -91,7 +91,7 @@
             // 
             this.addCliBtn.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.addCliBtn.Location = new System.Drawing.Point(260, 86);
-            this.addCliBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.addCliBtn.Margin = new System.Windows.Forms.Padding(2);
             this.addCliBtn.Name = "addCliBtn";
             this.addCliBtn.Size = new System.Drawing.Size(173, 32);
             this.addCliBtn.TabIndex = 2;
@@ -103,7 +103,7 @@
             // 
             this.delCliBtn.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.delCliBtn.Location = new System.Drawing.Point(475, 86);
-            this.delCliBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.delCliBtn.Margin = new System.Windows.Forms.Padding(2);
             this.delCliBtn.Name = "delCliBtn";
             this.delCliBtn.Size = new System.Drawing.Size(155, 32);
             this.delCliBtn.TabIndex = 3;
@@ -115,7 +115,7 @@
             // 
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView2.Location = new System.Drawing.Point(223, 555);
-            this.dataGridView2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dataGridView2.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.RowHeadersWidth = 51;
             this.dataGridView2.RowTemplate.Height = 24;
@@ -137,7 +137,7 @@
             // 
             this.addContrBtn.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.addContrBtn.Location = new System.Drawing.Point(260, 510);
-            this.addContrBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.addContrBtn.Margin = new System.Windows.Forms.Padding(2);
             this.addContrBtn.Name = "addContrBtn";
             this.addContrBtn.Size = new System.Drawing.Size(173, 30);
             this.addContrBtn.TabIndex = 6;
@@ -149,7 +149,7 @@
             // 
             this.delContrBtn.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.delContrBtn.Location = new System.Drawing.Point(475, 510);
-            this.delContrBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.delContrBtn.Margin = new System.Windows.Forms.Padding(2);
             this.delContrBtn.Name = "delContrBtn";
             this.delContrBtn.Size = new System.Drawing.Size(166, 30);
             this.delContrBtn.TabIndex = 7;
@@ -161,7 +161,7 @@
             // 
             this.editCliBtn.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.editCliBtn.Location = new System.Drawing.Point(665, 86);
-            this.editCliBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.editCliBtn.Margin = new System.Windows.Forms.Padding(2);
             this.editCliBtn.Name = "editCliBtn";
             this.editCliBtn.Size = new System.Drawing.Size(196, 32);
             this.editCliBtn.TabIndex = 8;
@@ -173,7 +173,7 @@
             // 
             this.searchBtn.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.searchBtn.Location = new System.Drawing.Point(1094, 392);
-            this.searchBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.searchBtn.Margin = new System.Windows.Forms.Padding(2);
             this.searchBtn.Name = "searchBtn";
             this.searchBtn.Size = new System.Drawing.Size(106, 32);
             this.searchBtn.TabIndex = 10;
@@ -185,7 +185,7 @@
             // 
             this.textBox1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.textBox1.Location = new System.Drawing.Point(904, 396);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(2);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(154, 26);
@@ -206,7 +206,7 @@
             // 
             this.button2.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button2.Location = new System.Drawing.Point(1202, 76);
-            this.button2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button2.Margin = new System.Windows.Forms.Padding(2);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(146, 34);
             this.button2.TabIndex = 14;
@@ -303,7 +303,7 @@
             // 
             this.button1.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button1.Location = new System.Drawing.Point(1082, 488);
-            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(139, 30);
             this.button1.TabIndex = 16;
@@ -315,7 +315,7 @@
             // 
             this.button3.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button3.Location = new System.Drawing.Point(686, 510);
-            this.button3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button3.Margin = new System.Windows.Forms.Padding(2);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(139, 30);
             this.button3.TabIndex = 17;
@@ -360,7 +360,7 @@
             // 
             this.textBox3.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.textBox3.Location = new System.Drawing.Point(904, 444);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox3.Margin = new System.Windows.Forms.Padding(2);
             this.textBox3.Multiline = true;
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(154, 26);
@@ -370,7 +370,7 @@
             // 
             this.button4.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button4.Location = new System.Drawing.Point(1094, 444);
-            this.button4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button4.Margin = new System.Windows.Forms.Padding(2);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(106, 32);
             this.button4.TabIndex = 23;
@@ -382,7 +382,7 @@
             // 
             this.button5.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button5.Location = new System.Drawing.Point(335, 458);
-            this.button5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button5.Margin = new System.Windows.Forms.Padding(2);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(212, 30);
             this.button5.TabIndex = 24;
@@ -420,10 +420,9 @@
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "MainForm";
             this.Text = "Автосервис";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form1_FormClosed);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();

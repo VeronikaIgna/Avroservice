@@ -14,7 +14,7 @@ namespace AvtoService
     public partial class AddRecord : Form
     {
 
-        public static string ConnectionString = $"Server=localhost;Database=avtoservice;Uid=root;pwd={Settings.DataBaseUsername};";
+        public static string ConnectionString = $"Server=localhost;Database=avtoservice;Uid=root;pwd={Settings.DataBasePassword};";
         Form f4;
         Record f3;
 
@@ -28,6 +28,7 @@ namespace AvtoService
 
         public AddRecord(Form f3)
         {
+            this.f3 = (Record)f3;
             InitializeComponent();
             Connection.Open();
             AddNameServices();
