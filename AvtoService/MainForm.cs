@@ -290,19 +290,13 @@ namespace AvtoService
 
         private void button4_Click_1(object sender, EventArgs e)
         {
-            {
 
-                for (int i = 0; i < dataGridView1.RowCount; i++)
-                {
-                    dataGridView1.Rows[i].Selected = false;
-                    for (int j = 0; j < dataGridView1.ColumnCount; j++)
-                        if (dataGridView1.Rows[i].Cells[3].Value != null)
-                            if (dataGridView1.Rows[i].Cells[2].Value.ToString().Contains(textBox3.Text))
-                            {
+            for (int i = 0; i < dataGridView1.RowCount; i++)
+            {
+                dataGridView1.Rows[i].Selected = false;
+                if (dataGridView1.Rows[i].Cells[1].Value != null)
+                    if (dataGridView1.Rows[i].Cells[1].Value.ToString().Contains(textBox3.Text))
                                 dataGridView1.Rows[i].Selected = true;
-                                break;
-                            }
-                }
             }
         }
 
