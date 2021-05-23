@@ -235,10 +235,28 @@ namespace AvtoService
             var helper = new WordHelper("AAAContractPr.doc");
 
             DataGridViewRow row = dataGridView1.Rows[dataGridView1.SelectedCells[0].RowIndex];
+            DataGridViewRow row1 = dataGridView2.Rows[dataGridView2.SelectedCells[0].RowIndex];
 
             var items = new Dictionary<string, string>
             {
-               {"<id_Contract>", row.Cells[0].Value.ToString() }
+               {"<id_Contract>", row.Cells[0].Value.ToString() },
+               { "<Surname_Owner>", row.Cells[1].Value.ToString() },
+               { "<Name_Owner>", row.Cells[2].Value.ToString() },
+               { "<MiddleName_Owner>", row.Cells[3].Value.ToString() },
+               { "<PhoneNumber_Owner>", row.Cells[4].Value.ToString() },
+               { "<Name_Marka>", row.Cells[5].Value.ToString() },
+               { "<Name_Model>", row.Cells[6].Value.ToString() },
+               { "<StateNumber>", row.Cells[7].Value.ToString() },
+               { "<Run>", row.Cells[9].Value.ToString() },
+               { "<Name_Services>", row1.Cells[3].Value.ToString() },
+               { "<Price_Services>", row1.Cells[4].Value.ToString() },
+               { "<Surname_Work>", row1.Cells[5].Value.ToString() },
+               { "<Name_Detail>", row1.Cells[6].Value.ToString() },
+        //     { "<Price_Detail>>", row1.Cells[8].Value.ToString() },
+               { "<CountDetails>", row1.Cells[7].Value.ToString() },
+               { "<CostDetails>", row1.Cells[8].Value.ToString() },
+               { "<TotalCost>", row1.Cells[9].Value.ToString() },
+               { "<StartDate>", row1.Cells[1].Value.ToString()},
             };
 
 
@@ -284,6 +302,11 @@ namespace AvtoService
                             }
                 }
             }
+        }
+
+        private void договораToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
         }
     }
  
