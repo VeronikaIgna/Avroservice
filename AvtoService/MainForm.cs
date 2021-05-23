@@ -231,7 +231,7 @@ namespace AvtoService
 
         private void button3_Click_1(object sender, EventArgs e)
         {
-            if (dataGridView2.Rows.Count > 0)
+            if (dataGridView2.Rows.Count > 1 )
             {
                 var helper = new WordHelper("AAAContractPr.doc");
 
