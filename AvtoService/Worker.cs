@@ -117,7 +117,7 @@ namespace AvtoService
         {
             int id = Convert.ToInt32(dataGridView1.Rows[dataGridView1.SelectedCells[0].RowIndex].Cells[0].Value.ToString());
 
-            string command1 = "delete from worker where id_worker = '" + id.ToString() + "'";
+            string command1 = "SET FOREIGN_KEY_CHECKS=0;delete from worker where id_worker = '" + id.ToString() + "';SET FOREIGN_KEY_CHECKS=1";
             MySqlCommand obd1 = new MySqlCommand(command1, Connection);
             obd1.ExecuteNonQuery();
             MessageBox.Show("Вы успешно удалили!");
