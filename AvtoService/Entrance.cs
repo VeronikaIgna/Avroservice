@@ -26,10 +26,11 @@ namespace AvtoService
         {
             if (textBox1.Text != "" && textBox2.Text != "")
             {
-                MySqlCommand cmd = new MySqlCommand("select id_Worker, Surname_Work, Name_Work, Middlename_work from worker where Login = '" + textBox1.Text + "' and Password = '" + textBox2.Text + "'", Connection);
+                MySqlCommand cmd = new MySqlCommand("select id_Worker, Surname_Work, Name_Work, Middlename_work, id_position from worker where Login = '" + textBox1.Text + "' and Password = '" + textBox2.Text + "'", Connection);
                 int id_Worker = 0;
                 MySqlDataReader reader = cmd.ExecuteReader();
-                string name = "", surname = "", lastname = ""; 
+                string name = "", surname = "", lastname = "";
+                int id_position = -1;
                 while (reader.Read())
                 {
                     id_Worker = reader.GetInt32("id_Worker");
@@ -38,19 +39,30 @@ namespace AvtoService
                         name = reader.GetString("Surname_Work");
                         surname = reader.GetString("Name_Work");
                         lastname = reader.GetString("Middlename_work");
+                        id_position = reader.GetInt32("id_position");
                     }
                     break;
                 }
                 if (id_Worker != 0)
                 {
-                    MainForm f1 = new MainForm(id_Worker, name, surname, lastname, this);
-                    f1.Show();
-                    this.Hide();
+                    if (id_position == 1)
+                    {
+                        MainForm f1 = new MainForm(id_Worker, name, surname, lastname, this);
+                        f1.Show();
+                        this.Hide();
+                    }
+                    else
+                    {
+                        FormaForTO f1 = new FormaForTO(this);
+                        f1.Show();
+                        this.Hide();
+                    }
                 }
                 else
                 {
                     MessageBox.Show("Логин или пароль не верен");
                 }
+                reader.Close();
             }
             else
             {

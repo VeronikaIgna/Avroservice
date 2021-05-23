@@ -92,7 +92,7 @@ namespace AvtoService
         private void Form1_FormClosed(object sender, FormClosedEventArgs e)
         {
             Connection.Close();
-            sf.Close();
+            sf.Show();
         }
 
         private void button3_Click(object sender, EventArgs e)//добавление договора

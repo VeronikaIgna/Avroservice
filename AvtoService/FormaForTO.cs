@@ -16,12 +16,14 @@ namespace AvtoService
         public static string ConnectionString = $"Server=localhost;Database={Settings.DataBaseName};" +
             $"Uid={Settings.DataBaseUsername};" +
             $"pwd={Settings.DataBasePassword};charset=koi8r";
-        Form f9;
+        Entrance entrance;
+
 
         private MySqlConnection Connection = new MySqlConnection(ConnectionString);
-        public FormaForTO()
+        public FormaForTO(Entrance entrance)
         {
             InitializeComponent();
+            this.entrance = entrance;
             Connection.Open();
         }
 
@@ -35,6 +37,13 @@ namespace AvtoService
         private void FormaForTO_FormClosed(object sender, FormClosedEventArgs e)
         {
             Connection.Close();
+            entrance.Show();
+        }
+
+        private void FormaForTO_FormClosed_1(object sender, FormClosedEventArgs e)
+        {
+            Connection.Close();
+            entrance.Show();
         }
     }
 }
