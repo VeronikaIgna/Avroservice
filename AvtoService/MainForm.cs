@@ -16,7 +16,7 @@ namespace AvtoService
     public partial class MainForm : Form
     {
         public static string ConnectionString = $"Server=localhost;Database=avtoservice;Uid=root;pwd={Settings.DataBasePassword};";
-      
+
 
         public static int countOwners = 0;
 
@@ -87,7 +87,7 @@ namespace AvtoService
             AddCar form2 = new AddCar(this);
             form2.Show();
         }
-    
+
         private void Form1_FormClosed(object sender, FormClosedEventArgs e)
         {
             Connection.Close();
@@ -157,19 +157,19 @@ namespace AvtoService
         {
             //Удаляет запись из таблицы и из БД
             int id = Convert.ToInt32(dataGridView2.Rows[dataGridView2.SelectedCells[0].RowIndex].Cells[0].Value.ToString());
-            MySqlCommand cmd = new MySqlCommand("delete from contract where id_contract = '" + id +"'", Connection);
+            MySqlCommand cmd = new MySqlCommand("delete from contract where id_contract = '" + id + "'", Connection);
             cmd.ExecuteNonQuery();
             this.dataGridView2.Rows.Remove(this.dataGridView2.CurrentRow);
         }
 
-  
+
 
         private void button2_Click_1(object sender, EventArgs e)
         {
 
             sf.Show();
             Close();
-          
+
         }
 
         private void button1_Click_1(object sender, EventArgs e)
@@ -231,13 +231,15 @@ namespace AvtoService
 
         private void button3_Click_1(object sender, EventArgs e)
         {
-            var helper = new WordHelper("AAAContractPr.doc");
-
-            DataGridViewRow row = dataGridView1.Rows[dataGridView1.SelectedCells[0].RowIndex];
-            DataGridViewRow row1 = dataGridView2.Rows[dataGridView2.SelectedCells[0].RowIndex];
-
-            var items = new Dictionary<string, string>
+            if (dataGridView2.Rows.Count > 0)
             {
+                var helper = new WordHelper("AAAContractPr.doc");
+
+                DataGridViewRow row = dataGridView1.Rows[dataGridView1.SelectedCells[0].RowIndex];
+                DataGridViewRow row1 = dataGridView2.Rows[dataGridView2.SelectedCells[0].RowIndex];
+
+                var items = new Dictionary<string, string>
+                {
                {"<id_Contract>", row.Cells[0].Value.ToString() },
                { "<Surname_Owner>", row.Cells[1].Value.ToString() },
                { "<Name_Owner>", row.Cells[2].Value.ToString() },
@@ -259,7 +261,8 @@ namespace AvtoService
             };
 
 
-            helper.Process(items);
+                helper.Process(items);
+            }
         }
 
         private void добавитьToolStripMenuItem2_Click(object sender, EventArgs e)
@@ -282,7 +285,7 @@ namespace AvtoService
         {
             Worker form7 = new Worker(this);
             form7.Show();
-          
+
         }
 
         private void button4_Click_1(object sender, EventArgs e)
@@ -313,6 +316,6 @@ namespace AvtoService
 
         }
     }
- 
+
 }
 
