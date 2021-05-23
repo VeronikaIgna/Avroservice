@@ -37,6 +37,7 @@ namespace AvtoService
             dataGridView1.Columns[4].Width = 180;
             dataGridView1.Columns[5].Width = 223;
             dataGridView1.Columns[6].Width = 180;
+            Connection.Open();
         }
         public void LoadDataFromTableWorker()// Метод для загрузки данных с таблицы СОТРУДНИКИ
         {
@@ -59,10 +60,10 @@ namespace AvtoService
         }
 
         private void button1_Click(object sender, EventArgs e)//Добавление Сотрудника
-        {            
-                AddWorker form8 = new AddWorker(this);
-                form8.Show();
-            }
+        {
+            AddWorker form8 = new AddWorker(this);
+            form8.Show();
+        }
 
         private void searchBtn_Click(object sender, EventArgs e)
         {
@@ -71,13 +72,9 @@ namespace AvtoService
                 for (int i = 0; i < dataGridView1.RowCount; i++)
                 {
                     dataGridView1.Rows[i].Selected = false;
-                    for (int j = 0; j < dataGridView1.ColumnCount; j++)
-                        if (dataGridView1.Rows[i].Cells[2].Value != null)
-                            if (dataGridView1.Rows[i].Cells[2].Value.ToString().Contains(textBox1.Text))
-                            {
-                                dataGridView1.Rows[1].Selected = true;
-                                break;
-                            }
+                    if (dataGridView1.Rows[i].Cells[1].Value != null)
+                        if (dataGridView1.Rows[i].Cells[1].Value.ToString().Contains(textBox1.Text))
+                            dataGridView1.Rows[i].Selected = true;
                 }
             }
         }
@@ -86,6 +83,22 @@ namespace AvtoService
         {
             ChangeWorker form11 = new ChangeWorker(this);
             form11.Show();
+        }
+
+        private void Worker_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            int id = Convert.ToInt32(dataGridView1.Rows[dataGridView1.SelectedCells[0].RowIndex].Cells[0].Value.ToString());
+
+            string command1 = "delete from worker where id_worker = '" + id.ToString() + "'";
+            MySqlCommand obd1 = new MySqlCommand(command1, Connection);
+            obd1.ExecuteNonQuery();
+            MessageBox.Show("Вы успешно удалили!");
+            this.dataGridView1.Rows.Remove(this.dataGridView1.CurrentRow);
         }
     }
 }
