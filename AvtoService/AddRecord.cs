@@ -14,7 +14,7 @@ namespace AvtoService
     public partial class AddRecord : Form
     {
 
-        public static string ConnectionString = "Server=localhost;Database=avtoservice;Uid=root;pwd=MemoriesInHeart2020;";
+        public static string ConnectionString = $"Server=localhost;Database=avtoservice;Uid=root;pwd={Settings.DataBaseUsername};";
         Form f4;
         Record f3;
 

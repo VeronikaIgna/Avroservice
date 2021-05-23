@@ -13,7 +13,7 @@ namespace AvtoService
 {
     public partial class Entrance : Form
     {
-        public static string ConnectionString = "Server=localhost;Database=avtoservice;Uid=root;pwd=MemoriesInHeart2020;";
+        public static string ConnectionString = $"Server=localhost;Database={Settings.DataBaseName};Uid=root;pwd={Settings.DataBasePassword};";
         private MySqlConnection Connection = new MySqlConnection(ConnectionString);
 
         public Entrance()
@@ -26,21 +26,24 @@ namespace AvtoService
         {
             if (textBox1.Text != "" && textBox2.Text != "")
             {
-                MySqlCommand cmd = new MySqlCommand("select id_Worker from worker where Login = '" + textBox1.Text + "' and Password = '" + textBox2.Text + "'", Connection);
+                MySqlCommand cmd = new MySqlCommand("select id_Worker, Surname_Work, Name_Work, Middlename_work from worker where Login = '" + textBox1.Text + "' and Password = '" + textBox2.Text + "'", Connection);
                 int id_Worker = 0;
-                using (var reader = cmd.ExecuteReader()) 
+                MySqlDataReader reader = cmd.ExecuteReader();
+                string name = "", surname = "", lastname = ""; 
+                while (reader.Read())
                 {
-                    
-                    while (reader.Read())
+                    id_Worker = reader.GetInt32("id_Worker");
+                    if (id_Worker != 0)
                     {
-                        
-                        id_Worker = reader.GetInt32("id_Worker");
-                        break;
+                        name = reader.GetString("Surname_Work");
+                        surname = reader.GetString("Name_Work");
+                        lastname = reader.GetString("Middlename_work");
                     }
+                    break;
                 }
                 if (id_Worker != 0)
                 {
-                    MainForm f1 = new MainForm(id_Worker, this);
+                    MainForm f1 = new MainForm(id_Worker, name, surname, lastname, this);
                     f1.Show();
                     this.Hide();
                 }
@@ -60,4 +63,4 @@ namespace AvtoService
 
         }
     }
-    }
+}

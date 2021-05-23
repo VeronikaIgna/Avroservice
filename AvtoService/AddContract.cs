@@ -13,7 +13,7 @@ namespace AvtoService
 {
     public partial class AddContract : Form
     {
-        public static string ConnectionString = "Server=localhost;Database=avtoservice;Uid=root;pwd=MemoriesInHeart2020;";
+        public static string ConnectionString = $"Server=localhost;Database=avtoservice;Uid=root;pwd={Settings.DataBasePassword};";
 
         MainForm f1;
         public int id_Owner;

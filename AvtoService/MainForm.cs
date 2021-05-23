@@ -15,7 +15,7 @@ namespace AvtoService
 
     public partial class MainForm : Form
     {
-        public static string ConnectionString = "Server=localhost;Database=avtoservice;Uid=root;pwd=MemoriesInHeart2020;";
+        public static string ConnectionString = $"Server=localhost;Database=avtoservice;Uid=root;pwd={Settings.DataBasePassword};";
       
 
         public static int countOwners = 0;
@@ -24,9 +24,10 @@ namespace AvtoService
         public int idManager;
 
         private MySqlConnection Connection = new MySqlConnection(ConnectionString);
-        public MainForm(int idManager, Entrance sf)
+        public MainForm(int idManager, string name, string surname, string lastname, Entrance sf)
         {
             InitializeComponent();
+            NameLabel.Text = $"{surname} {name} {lastname}";
             this.idManager = idManager;
             this.sf = sf;
             LoadDataFromTableOwner();
