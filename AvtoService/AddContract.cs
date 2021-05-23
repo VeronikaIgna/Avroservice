@@ -40,7 +40,7 @@ namespace AvtoService
 
         private void AddMaster()
         {
-            MySqlCommand obd1 = new MySqlCommand("SELECT Surname_Work, id_Worker FROM worker where id_Worker = '" + f1.idManager + "'", Connection);// SQL запрос для загрузки данных
+            MySqlCommand obd1 = new MySqlCommand("SELECT Surname_Work, id_Worker FROM worker", Connection);// SQL запрос для загрузки данных
             using (var reader = obd1.ExecuteReader())
             {
                 while (reader.Read())

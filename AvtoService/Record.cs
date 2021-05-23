@@ -133,6 +133,17 @@ namespace AvtoService
             }
         }
 
+        private void dataGridView1_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
+        {
+
+            foreach (DataGridViewRow row in dataGridView1.Rows)
+                if (row.Cells[7].Value != null && row.Cells[7].Value.ToString().Equals("Выполнен"))
+                    row.DefaultCellStyle.BackColor = Color.FromArgb(255, 0, 0);
+                else if (row.Cells[7].Value != null && row.Cells[7].Value.ToString().Equals("Активный"))
+                    row.DefaultCellStyle.BackColor = Color.Green;
+                else if (row.Cells[7].Value != null && row.Cells[7].Value.ToString().Equals("Ожидает"))
+                    row.DefaultCellStyle.BackColor = Color.Yellow;
+        }
     }
 }
 

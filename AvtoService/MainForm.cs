@@ -34,7 +34,6 @@ namespace AvtoService
             Connection.Open();
             dataGridView1.DefaultCellStyle.Font = new Font("Times New Roman", 12);
             dataGridView1.ColumnHeadersDefaultCellStyle.Font = new Font("Times New Roman", 14);
-            //dataGridView1.ColumnHeadersDefaultCellStyle.BackColor = Color.Red;
             dataGridView1.Columns[1].Width = 150;
             dataGridView1.Columns[2].Width = 150;
             dataGridView1.Columns[3].Width = 150;
@@ -46,7 +45,7 @@ namespace AvtoService
             dataGridView1.Columns[9].Width = 140;
             dataGridView2.DefaultCellStyle.Font = new Font("Times New Roman", 12);
             dataGridView2.ColumnHeadersDefaultCellStyle.Font = new Font("Times New Roman", 14);
-           // this.dataGridView1.Columns[3].HeaderCell.Style.BackColor = Color.Red;
+            // this.dataGridView1.Columns[3].HeaderCell.Style.BackColor = Color.Red;
 
         }
         public void LoadDataFromTableContract(int id_Owner)// Метод для загрузки данных с таблицы владельцев
@@ -305,6 +304,11 @@ namespace AvtoService
         }
 
         private void договораToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridView1_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
         {
 
         }
