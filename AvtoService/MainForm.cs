@@ -22,11 +22,15 @@ namespace AvtoService
 
         Entrance sf;
         public int idManager;
+        string name= "", surname = "", lastname = "";
 
         private MySqlConnection Connection = new MySqlConnection(ConnectionString);
         public MainForm(int idManager, string name, string surname, string lastname, Entrance sf)
         {
             InitializeComponent();
+            this.name = name;
+            this.surname = surname;
+            this.lastname = lastname;
             NameLabel.Text = $"{surname} {name} {lastname}";
             this.idManager = idManager;
             this.sf = sf;
@@ -258,6 +262,9 @@ namespace AvtoService
                { "<CostDetails>", row1.Cells[8].Value.ToString() },
                { "<TotalCost>", row1.Cells[9].Value.ToString() },
                { "<StartDate>", row1.Cells[1].Value.ToString()},
+               { "<Surname_Work1>", surname},
+               { "<Name_Work1>", name},
+               { "<Middlename_Work1>", lastname},
             };
 
 

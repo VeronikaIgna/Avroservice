@@ -36,8 +36,8 @@ namespace AvtoService
                     id_Worker = reader.GetInt32("id_Worker");
                     if (id_Worker != 0)
                     {
-                        name = reader.GetString("Surname_Work");
-                        surname = reader.GetString("Name_Work");
+                        surname = reader.GetString("Surname_Work");
+                        name = reader.GetString("Name_Work");
                         lastname = reader.GetString("Middlename_work");
                         id_position = reader.GetInt32("id_position");
                     }
