@@ -11,7 +11,7 @@ using MySql.Data.MySqlClient;
 
 namespace AvtoService
 {
-    public partial class FormaForTO : Form //Форма для сотрудников ТО
+    public partial class FormaForTO : Form //Форма для сотрудников ТОО
     {
         public static string ConnectionString = $"Server=localhost;Database={Settings.DataBaseName};" +
             $"Uid={Settings.DataBaseUsername};" +
