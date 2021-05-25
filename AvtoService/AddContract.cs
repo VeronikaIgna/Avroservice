@@ -103,11 +103,6 @@ namespace AvtoService
             Close();
         }
 
-        private void AddContract_Load_1(object sender, EventArgs e)
-        {
-
-        }
-
         private void loadServices()
         {
             serviceBox.Items.Clear();
@@ -125,7 +120,7 @@ namespace AvtoService
         private void butAddContract_Click(object sender, EventArgs e)// добавление данных о договоре
         {
             {
-                if ((startDateEdit.Text != "") && (endDateEdit.Text != "") && (serviceBox.Text != "") && (serviceCostEdit.Text != "") && (detailCountEdut.Text != ""))
+                if ((dateTimePicker1.Text != "" ) && (dateTimePicker2.Text != "") && (serviceBox.Text != "") && (serviceCostEdit.Text != "") && (detailCountEdut.Text != ""))
                 {
                     if (totalDetailCost == 0)
                     {
@@ -146,14 +141,16 @@ namespace AvtoService
 
                         int masterId = masArr[masterBox.SelectedIndex].id;
                         int serviceId = servArr[serviceBox.SelectedIndex].id;
-                        string values = "('" + startDateEdit.Text + "', '" + endDateEdit.Text+"', '" + finalCost.ToString() +"', '" + id_Owner.ToString() + "','"+masterId+"','"+serviceId+"','" + idDet +"')";
+                        string values = "('" + dateTimePicker1.Value.Date.ToString("yyyy-MM-dd") + "', '" + dateTimePicker2.Value.Date.ToString("yyyy-MM-dd") + "', '" + finalCost.ToString() +"', '" + id_Owner.ToString() + "','"+masterId+"','"+serviceId+"','" + idDet +"')";
                         com.CommandText = "insert into `contract` (startdate, enddate, totalcost, id_owner, id_Worker, id_services, id_listDetails) values " + values;
                         com.ExecuteNonQuery();
                         f1.LoadDataFromTableContract(id_Owner);
                         Close();
                     }
+                    }
+                
 
-                }
+                
                 else MessageBox.Show("Договор не добавлен! Пропущенны поля!");
             }
 

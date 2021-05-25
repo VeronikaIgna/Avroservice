@@ -82,11 +82,7 @@ namespace AvtoService
             this.dataGridView1.Rows.Remove(this.dataGridView1.CurrentRow);
         }
 
-        private void button4_Click(object sender, EventArgs e)
-        {
-            ChangeStatus form6 = new ChangeStatus(this);
-            form6.Show();
-        }
+        
 
         private void button3_Click(object sender, EventArgs e)
         {
@@ -138,11 +134,11 @@ namespace AvtoService
 
             foreach (DataGridViewRow row in dataGridView1.Rows)
                 if (row.Cells[7].Value != null && row.Cells[7].Value.ToString().Equals("Выполнен"))
-                    row.DefaultCellStyle.BackColor = Color.FromArgb(255, 0, 0);
+                    row.DefaultCellStyle.BackColor = Color.FromArgb(201, 242, 201);
                 else if (row.Cells[7].Value != null && row.Cells[7].Value.ToString().Equals("Активный"))
-                    row.DefaultCellStyle.BackColor = Color.Green;
+                    row.DefaultCellStyle.BackColor = Color.FromArgb(255, 140, 150);
                 else if (row.Cells[7].Value != null && row.Cells[7].Value.ToString().Equals("Ожидает"))
-                    row.DefaultCellStyle.BackColor = Color.Yellow;
+                    row.DefaultCellStyle.BackColor = Color.FromArgb(255, 228,150);
         }
     }
 }

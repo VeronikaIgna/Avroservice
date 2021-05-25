@@ -53,7 +53,7 @@ namespace AvtoService
                     }
                     else
                     {
-                        FormaForTO f1 = new FormaForTO(this, id_Worker);
+                        FormaForTO f1 = new FormaForTO(id_Worker, name, surname, lastname, this);
                         f1.Show();
                         this.Hide();
                     }

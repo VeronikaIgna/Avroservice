@@ -42,8 +42,6 @@
             this.label11 = new System.Windows.Forms.Label();
             this.finalJobCostLabel = new System.Windows.Forms.Label();
             this.finalCostLabel = new System.Windows.Forms.Label();
-            this.startDateEdit = new System.Windows.Forms.TextBox();
-            this.endDateEdit = new System.Windows.Forms.TextBox();
             this.serviceCostEdit = new System.Windows.Forms.TextBox();
             this.detailCountEdut = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
@@ -53,6 +51,8 @@
             this.detailBox = new System.Windows.Forms.ComboBox();
             this.sumBtn = new System.Windows.Forms.Button();
             this.serviceBox = new System.Windows.Forms.ComboBox();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             this.SuspendLayout();
             // 
             // label1
@@ -193,24 +193,6 @@
             this.finalCostLabel.TabIndex = 14;
             this.finalCostLabel.Text = "Общая стоимость работы:";
             // 
-            // startDateEdit
-            // 
-            this.startDateEdit.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.startDateEdit.Location = new System.Drawing.Point(775, 123);
-            this.startDateEdit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.startDateEdit.Name = "startDateEdit";
-            this.startDateEdit.Size = new System.Drawing.Size(233, 30);
-            this.startDateEdit.TabIndex = 15;
-            // 
-            // endDateEdit
-            // 
-            this.endDateEdit.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.endDateEdit.Location = new System.Drawing.Point(775, 162);
-            this.endDateEdit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.endDateEdit.Name = "endDateEdit";
-            this.endDateEdit.Size = new System.Drawing.Size(233, 30);
-            this.endDateEdit.TabIndex = 16;
-            // 
             // serviceCostEdit
             // 
             this.serviceCostEdit.Enabled = false;
@@ -305,6 +287,22 @@
             this.serviceBox.TabIndex = 27;
             this.serviceBox.SelectedIndexChanged += new System.EventHandler(this.serviceBox_SelectedIndexChanged);
             // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTimePicker1.Location = new System.Drawing.Point(775, 120);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(233, 30);
+            this.dateTimePicker1.TabIndex = 28;
+            // 
+            // dateTimePicker2
+            // 
+            this.dateTimePicker2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.dateTimePicker2.Location = new System.Drawing.Point(775, 165);
+            this.dateTimePicker2.Name = "dateTimePicker2";
+            this.dateTimePicker2.Size = new System.Drawing.Size(233, 30);
+            this.dateTimePicker2.TabIndex = 29;
+            // 
             // AddContract
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -312,6 +310,8 @@
             this.BackgroundImage = global::AvtoService.Properties.Resources.IMG_20210519_175650_948_01;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1198, 870);
+            this.Controls.Add(this.dateTimePicker2);
+            this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.serviceBox);
             this.Controls.Add(this.sumBtn);
             this.Controls.Add(this.detailBox);
@@ -321,8 +321,6 @@
             this.Controls.Add(this.label14);
             this.Controls.Add(this.detailCountEdut);
             this.Controls.Add(this.serviceCostEdit);
-            this.Controls.Add(this.endDateEdit);
-            this.Controls.Add(this.startDateEdit);
             this.Controls.Add(this.finalCostLabel);
             this.Controls.Add(this.finalJobCostLabel);
             this.Controls.Add(this.label11);
@@ -362,8 +360,6 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label finalJobCostLabel;
         private System.Windows.Forms.Label finalCostLabel;
-        private System.Windows.Forms.TextBox startDateEdit;
-        private System.Windows.Forms.TextBox endDateEdit;
         private System.Windows.Forms.TextBox serviceCostEdit;
         private System.Windows.Forms.TextBox detailCountEdut;
         private System.Windows.Forms.Label label14;
@@ -373,5 +369,7 @@
         private System.Windows.Forms.ComboBox detailBox;
         private System.Windows.Forms.Button sumBtn;
         private System.Windows.Forms.ComboBox serviceBox;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dateTimePicker2;
     }
 }

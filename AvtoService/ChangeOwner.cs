@@ -15,7 +15,7 @@ namespace AvtoService
     {
         public static string ConnectionString = $"Server=localhost;Database={Settings.DataBaseName};" +
             $"Uid={Settings.DataBaseUsername};" +
-            $"pwd={Settings.DataBasePassword};charset=koi8r";
+            $"pwd={Settings.DataBasePassword};";
         MainForm f1;
 
         private MySqlConnection Connection = new MySqlConnection(ConnectionString);

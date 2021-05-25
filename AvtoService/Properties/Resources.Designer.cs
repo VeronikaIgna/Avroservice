@@ -173,6 +173,16 @@ namespace AvtoService.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap IMG_20210517_230500_763_034 {
+            get {
+                object obj = ResourceManager.GetObject("IMG_20210517_230500_763-034", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap IMG_20210517_231859_785_01 {
             get {
                 object obj = ResourceManager.GetObject("IMG_20210517_231859_785-01", resourceCulture);

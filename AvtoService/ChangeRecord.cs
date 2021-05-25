@@ -90,7 +90,7 @@ namespace AvtoService
                 Close();
 
             }
-            else MessageBox.Show("Запись не добавлена! Пропущены поля!");
+            else MessageBox.Show("Запись не изменена! Пропущены поля!");
         }
 
         private void AddStateNumber()
