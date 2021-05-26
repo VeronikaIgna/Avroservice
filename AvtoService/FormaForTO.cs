@@ -33,7 +33,6 @@ namespace AvtoService
             this.id_worker = id_worker;
             this.entrance = entrance;
             LoadRecordData();
-            LoadCarData();
             this.id_worker = id_worker;
             dataGridView1.DefaultCellStyle.Font = new Font("Times New Roman", 12);
             dataGridView1.ColumnHeadersDefaultCellStyle.Font = new Font("Times New Roman", 14);
@@ -49,7 +48,7 @@ namespace AvtoService
 
         public void LoadRecordData()
         {
-            MySqlCommand obd3 = new MySqlCommand("SELECT id_Record, " +
+            MySqlCommand obd3 = new MySqlCommand("SELECT id_Record," +
                 "Surname_Owner AS 'Фамилия', " +
                 "Name_Owner AS 'Имя', " +
                 "MiddleName_Owner AS 'Отчество', " +
@@ -69,11 +68,27 @@ namespace AvtoService
             dataAdapter.Fill(dt);// Загрузка данных
             dataGridView1.DataSource = dt; // Вывод данных  
             dataGridView1.Columns[0].Visible = false;
+            dataGridView1.Columns[1].Visible = false;
         }
 
-        public void LoadCarData()
+        public void LoadCarData(int owner_id)
         {
-            MySqlCommand dowContr = new MySqlCommand("SELECT Owner.id_Owner, Name_marka AS 'Марка', Name_model AS 'Модель', StateNumber AS 'Гос. номер', YearOfManufacture AS 'Год выпуска', Run AS 'Пробег', StartDate AS 'Дата начала работы' , EndDate AS 'Дата окончания работы', Name_Services AS 'Наименование услуги' FROM Owner LEFT JOIN `Car` ON Car.id_Owner = Owner.id_Owner LEFT JOIN `contract` ON contract.id_Owner = Owner.id_Owner LEFT JOIN `services` ON services.id_Services = contract.id_Services LEFT JOIN `Marka` ON Marka.id_marka = Car.id_marka LEFT JOIN `Model` ON Model.id_model = Car.id_model", Connection);
+            string q = $"SELECT Owner.id_Owner, " +
+                $"Name_marka AS 'Марка', " +
+                $"Name_model AS 'Модель', " +
+                $"StateNumber AS 'Гос. номер', " +
+                $"YearOfManufacture AS 'Год выпуска', " +
+                $"Run AS 'Пробег', " +
+                $"StartDate AS 'Дата начала работы' , " +
+                $"EndDate AS 'Дата окончания работы', " +
+                $"Name_Services AS 'Наименование услуги' " +
+                $"FROM Owner " +
+                $"LEFT JOIN `Car` ON Car.id_Owner = Owner.id_Owner " +
+                $"LEFT JOIN `contract` ON contract.id_Owner = Owner.id_Owner " +
+                $"LEFT JOIN `services` ON services.id_Services = contract.id_Services " +
+                $"LEFT JOIN `Marka` ON Marka.id_marka = Car.id_marka " +
+                $"LEFT JOIN `Model` ON Model.id_model = Car.id_model WHERE Owner.id_Owner = {owner_id};";
+            MySqlCommand dowContr = new MySqlCommand(q, Connection);
             MySqlDataAdapter dataAdapter = new MySqlDataAdapter(dowContr);
             DataTable dt = new DataTable();
             dataAdapter.Fill(dt);// Загрузка данных
@@ -110,6 +125,14 @@ namespace AvtoService
             entrance.Show();
         }
 
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex != -1 && e.RowIndex != dataGridView1.RowCount - 1)
+            {
+                DataGridViewRow d = dataGridView1.Rows[e.RowIndex];
+                LoadCarData(int.Parse(d.Cells[0].Value.ToString()));
+            }
+        }
 
         private void dataGridView1_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
         {
