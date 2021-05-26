@@ -62,7 +62,7 @@ namespace AvtoService
                 "LEFT JOIN `Owner` ON Owner.id_Owner = record.id_Owner " +
                 "LEFT JOIN `status` ON status.id_status = record.id_status " +
                 "LEFT JOIN `Services` ON Services.id_Services = record.id_Services " +
-                $"LEFT JOIN `Worker` on worker.id_worker = {id_worker} ", Connection);
+                $"where record.id_worker = {id_worker}", Connection);
             MySqlDataAdapter dataAdapter = new MySqlDataAdapter(obd3);
             DataTable dt = new DataTable();
             dataAdapter.Fill(dt);// Загрузка данных
