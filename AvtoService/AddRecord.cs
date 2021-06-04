@@ -104,7 +104,7 @@ namespace AvtoService
                     $"'{counStatus}'," +
                     $"{countServices}," +
                     $"{countWorker}," +
-                    $"{idOwner}" +
+                    $"{idOwner}," +
                     $"'{textBox3.Text.ToString()}')";
                 MySqlCommand command = new MySqlCommand(query, Connection);
                 command.ExecuteNonQuery(); //выполнение запроса

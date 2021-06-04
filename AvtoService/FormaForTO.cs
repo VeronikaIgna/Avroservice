@@ -87,6 +87,7 @@ namespace AvtoService
                 $"LEFT JOIN `contract` ON contract.id_Owner = Owner.id_Owner " +
                 $"LEFT JOIN `services` ON services.id_Services = contract.id_Services " +
                 $"LEFT JOIN `Marka` ON Marka.id_marka = Car.id_marka " +
+                $"LEFT JOIN `Record` ON Record.id_worker = {id_worker} " +
                 $"LEFT JOIN `Model` ON Model.id_model = Car.id_model WHERE Owner.id_Owner = {owner_id};";
             MySqlCommand dowContr = new MySqlCommand(q, Connection);
             MySqlDataAdapter dataAdapter = new MySqlDataAdapter(dowContr);
