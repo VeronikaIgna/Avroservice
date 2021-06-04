@@ -89,12 +89,18 @@ namespace AvtoService
 
             if ((dateTimePicker2.Text != "") && (textBox2.Text != "") && (comboBox4.Text != "") && (stateNumbersBox.Text != "") && (comboBox2.Text != "") && (comboBox3.Text != "") && (textBox3.Text != ""))
             {
+                MySqlCommand cmd3 = new MySqlCommand("SELECT id_Worker FROM worker where Surname_Work = '" + comboBox3.Text + "'", Connection);
+                int countWorker = Convert.ToInt32(cmd3.ExecuteScalar());
+                if (!CheckWorkerForWorkTime(countWorker, dateTimePicker2.Value.Date.ToString("yyyy-MM-dd"), textBox2.Text.ToString()))
+                {
+                    MessageBox.Show("Мастер в это время занят!");
+                    return;
+                }
+
                 MySqlCommand cmd1 = new MySqlCommand("SELECT id_Owner FROM Car  where StateNumber = '" + stateNumbersBox.Text + "'", Connection);
                 int idOwner = Convert.ToInt32(cmd1.ExecuteScalar());
                 MySqlCommand cmd2 = new MySqlCommand("SELECT id_Services FROM services where Name_Services = '" + comboBox2.Text + "'", Connection);
-                int countServices = Convert.ToInt32(cmd2.ExecuteScalar());
-                MySqlCommand cmd3 = new MySqlCommand("SELECT id_Worker FROM worker where Surname_Work = '" + comboBox3.Text + "'", Connection);
-                int countWorker = Convert.ToInt32(cmd3.ExecuteScalar());
+                int countServices = Convert.ToInt32(cmd2.ExecuteScalar());              
                 MySqlCommand cmd4 = new MySqlCommand("SELECT id_Status FROM status where Name_status = '" + comboBox4.Text + "'", Connection);
                 int counStatus = Convert.ToInt32(cmd4.ExecuteScalar());
 
@@ -115,6 +121,49 @@ namespace AvtoService
 
             }
             else MessageBox.Show("Запись не добавлена! Пропущены поля!");
+        }
+
+        private bool CheckWorkerForWorkTime(int idWorker, string Date, string Time)
+        {
+            string checkWorkerQuery = $"SELECT * FROM record WHERE id_worker = {idWorker} AND date <= '{Date}' ORDER BY date DESC LIMIT 1";
+            MySqlCommand com = new MySqlCommand(checkWorkerQuery, Connection);
+            var reader = com.ExecuteReader();
+            string timeWork = "";
+            int idService = -1;
+            while (reader.Read())
+            {
+                var dateWork = reader.GetDateTime("Date");
+                var formattedDateWork = dateWork.ToString("yyyy-MM-dd");
+                if (!formattedDateWork.Equals(Date))
+                {
+                    reader.Close();
+                    return true;
+                }
+                timeWork = reader.GetString("Time_work");
+                idService = reader.GetInt32("id_Services");
+            }
+            reader.Close();
+            string CheckServiceTime = $"SELECT * FROM services WHERE id_services = {idService}";
+            com = new MySqlCommand(CheckServiceTime, Connection);
+            reader = com.ExecuteReader();
+            string dateAndTime = Date + " " + timeWork;
+            DateTime finalEndDateTime = DateTime.ParseExact(dateAndTime, "yyyy-MM-dd HH:mm:ss", System.Globalization.CultureInfo.InvariantCulture);
+            DateTime currDateTime = DateTime.ParseExact(Date + " " + Time + ":00", "yyyy-MM-dd HH:mm:ss", System.Globalization.CultureInfo.InvariantCulture);
+
+            while (reader.Read())
+            {
+                int workTime = reader.GetInt32("workTime");
+                TimeSpan t = TimeSpan.FromHours(workTime);
+                DateTime d = new DateTime(t.Ticks);
+                finalEndDateTime.Add(d.TimeOfDay);
+                if (finalEndDateTime >= currDateTime)
+                {
+                    reader.Close();
+                    return false;
+                }
+            }
+            reader.Close();
+            return true;
         }
 
     }
