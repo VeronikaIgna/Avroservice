@@ -286,8 +286,8 @@
             // календарьЗаписейToolStripMenuItem
             // 
             this.календарьЗаписейToolStripMenuItem.Name = "календарьЗаписейToolStripMenuItem";
-            this.календарьЗаписейToolStripMenuItem.Size = new System.Drawing.Size(187, 26);
-            this.календарьЗаписейToolStripMenuItem.Text = "Календарь записей";
+            this.календарьЗаписейToolStripMenuItem.Size = new System.Drawing.Size(85, 26);
+            this.календарьЗаписейToolStripMenuItem.Text = "Записи";
             this.календарьЗаписейToolStripMenuItem.Click += new System.EventHandler(this.календарьЗаписейToolStripMenuItem_Click);
             // 
             // сотрудникиToolStripMenuItem

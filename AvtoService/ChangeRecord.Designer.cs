@@ -43,6 +43,8 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.textBox3 = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label10
@@ -77,7 +79,7 @@
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button2.Location = new System.Drawing.Point(647, 513);
+            this.button2.Location = new System.Drawing.Point(747, 692);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(140, 42);
             this.button2.TabIndex = 27;
@@ -87,7 +89,7 @@
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button1.Location = new System.Drawing.Point(457, 513);
+            this.button1.Location = new System.Drawing.Point(557, 692);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(142, 42);
             this.button1.TabIndex = 26;
@@ -189,12 +191,34 @@
             this.label4.TabIndex = 16;
             this.label4.Text = "Дата:";
             // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label11.Location = new System.Drawing.Point(200, 465);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(120, 27);
+            this.label11.TabIndex = 31;
+            this.label11.Text = "Описание:";
+            // 
+            // textBox3
+            // 
+            this.textBox3.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBox3.Location = new System.Drawing.Point(381, 450);
+            this.textBox3.Multiline = true;
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(420, 171);
+            this.textBox3.TabIndex = 32;
+            // 
             // ChangeRecord
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::AvtoService.Properties.Resources.IMG_20210519_184359_633_013;
-            this.ClientSize = new System.Drawing.Size(820, 586);
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(915, 760);
+            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.label11);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.comboBox4);
             this.Controls.Add(this.label9);
@@ -233,5 +257,7 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.TextBox textBox3;
     }
 }

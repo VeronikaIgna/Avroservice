@@ -31,7 +31,7 @@ namespace AvtoService
             LoadDataFromTableRecord();
             this.f3 = f3;
             dataGridView1.DefaultCellStyle.Font = new Font("Times New Roman", 12);
-            dataGridView1.ColumnHeadersDefaultCellStyle.Font = new Font("Times New Roman", 14);
+            dataGridView1.ColumnHeadersDefaultCellStyle.Font = new Font("Times New Roman",14);
             //dataGridView1.ColumnHeadersDefaultCellStyle.BackColor = Color.Red;
             dataGridView1.Columns[1].Width = 150;
             dataGridView1.Columns[2].Width = 150;
@@ -40,13 +40,14 @@ namespace AvtoService
             dataGridView1.Columns[5].Width = 120;
             dataGridView1.Columns[6].Width = 120;
             dataGridView1.Columns[7].Width = 120;
-            dataGridView1.Columns[8].Width = 180;
+            dataGridView1.Columns[8].Width = 215;
             dataGridView1.Columns[9].Width = 140;
+            dataGridView1.Columns[10].Width = 330;
             Connection.Open();
         }
         public void LoadDataFromTableRecord()// Метод для загрузки данных с таблицы ЗАПИСЬ
         {
-            MySqlCommand obd3 = new MySqlCommand("SELECT id_Record, Surname_Owner AS 'Фамилия', Name_Owner AS 'Имя', MiddleName_Owner AS 'Отчество', StateNumber AS 'Гос.номер', Date AS 'Дата', Time_work AS 'Время', Name_Status AS 'Статус', Name_Services AS 'Наименование услуги', Surname_Work AS 'Мастер' from record LEFT JOIN `Car` ON Car.id_Owner = record.id_Owner LEFT JOIN `Owner` ON Owner.id_Owner = record.id_Owner LEFT JOIN `status` ON status.id_status = record.id_status LEFT JOIN `worker` ON worker.id_Worker = record.id_Worker LEFT JOIN `Services` ON Services.id_Services = record.id_Services", Connection);
+            MySqlCommand obd3 = new MySqlCommand("SELECT id_Record, Surname_Owner AS 'Фамилия', Name_Owner AS 'Имя', MiddleName_Owner AS 'Отчество', StateNumber AS 'Гос.номер', Date AS 'Дата', Time_work AS 'Время', Name_Status AS 'Статус', Name_Services AS 'Наименование услуги', Surname_Work AS 'Мастер', description AS 'Описание' from record LEFT JOIN `Car` ON Car.id_Owner = record.id_Owner LEFT JOIN `Owner` ON Owner.id_Owner = record.id_Owner LEFT JOIN `status` ON status.id_status = record.id_status LEFT JOIN `worker` ON worker.id_Worker = record.id_Worker LEFT JOIN `Services` ON Services.id_Services = record.id_Services", Connection);
             MySqlDataAdapter dataAdapter = new MySqlDataAdapter(obd3);
             DataTable dt = new DataTable();
             dataAdapter.Fill(dt);// Загрузка данных

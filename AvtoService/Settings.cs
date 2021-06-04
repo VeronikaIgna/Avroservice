@@ -10,6 +10,6 @@ namespace AvtoService
     {
         public static string DataBaseName = "avtoservice";
         public static string DataBaseUsername = "root";
-        public static string DataBasePassword = "koyash";
+        public static string DataBasePassword = "MemoriesInHeart2020";
     }
 }

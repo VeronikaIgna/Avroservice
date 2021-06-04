@@ -87,7 +87,7 @@ namespace AvtoService
         private void button1_Click(object sender, EventArgs e)//Добавление записи
         {
 
-            if ((dateTimePicker2.Text != "") && (textBox2.Text != "") && (comboBox4.Text != "") && (stateNumbersBox.Text != "") && (comboBox2.Text != "") && (comboBox3.Text != ""))
+            if ((dateTimePicker2.Text != "") && (textBox2.Text != "") && (comboBox4.Text != "") && (stateNumbersBox.Text != "") && (comboBox2.Text != "") && (comboBox3.Text != "") && (textBox3.Text != ""))
             {
                 MySqlCommand cmd1 = new MySqlCommand("SELECT id_Owner FROM Car  where StateNumber = '" + stateNumbersBox.Text + "'", Connection);
                 int idOwner = Convert.ToInt32(cmd1.ExecuteScalar());
@@ -98,13 +98,14 @@ namespace AvtoService
                 MySqlCommand cmd4 = new MySqlCommand("SELECT id_Status FROM status where Name_status = '" + comboBox4.Text + "'", Connection);
                 int counStatus = Convert.ToInt32(cmd4.ExecuteScalar());
 
-                string query = $"Insert Into record (Date, Time_Work,  id_Status, id_Services,id_Worker,id_Owner) values " +
+                string query = $"Insert Into record (Date, Time_Work,  id_Status, id_Services,id_Worker,id_Owner, description ) values " +
                     $"('{dateTimePicker2.Value.Date.ToString("yyyy-MM-dd")}', " +
                     $"'{textBox2.Text.ToString()}'," +
                     $"'{counStatus}'," +
                     $"{countServices}," +
                     $"{countWorker}," +
-                    $"{idOwner})";
+                    $"{idOwner}" +
+                    $"'{textBox3.Text.ToString()}')";
                 MySqlCommand command = new MySqlCommand(query, Connection);
                 command.ExecuteNonQuery(); //выполнение запроса
                 MessageBox.Show("Данные добавлены!");
@@ -115,5 +116,6 @@ namespace AvtoService
             }
             else MessageBox.Show("Запись не добавлена! Пропущены поля!");
         }
+
     }
 }
