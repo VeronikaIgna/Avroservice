@@ -125,7 +125,7 @@ namespace AvtoService
 
         private bool CheckWorkerForWorkTime(int idWorker, string Date, string Time)
         {
-            string checkWorkerQuery = $"SELECT * FROM record WHERE id_worker = {idWorker} AND date <= '{Date}' ORDER BY date DESC LIMIT 1";
+            string checkWorkerQuery = $"SELECT * FROM record WHERE id_worker = {idWorker} AND date <= '{Date}' ORDER BY id_Record DESC LIMIT 1";
             MySqlCommand com = new MySqlCommand(checkWorkerQuery, Connection);
             var reader = com.ExecuteReader();
             string timeWork = "";
@@ -154,8 +154,7 @@ namespace AvtoService
             {
                 int workTime = reader.GetInt32("workTime");
                 TimeSpan t = TimeSpan.FromHours(workTime);
-                DateTime d = new DateTime(t.Ticks);
-                finalEndDateTime.Add(d.TimeOfDay);
+                finalEndDateTime += t;
                 if (finalEndDateTime >= currDateTime)
                 {
                     reader.Close();
